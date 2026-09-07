@@ -1792,6 +1792,82 @@ document.addEventListener('DOMContentLoaded',()=>{
 }
 </style>
 
+\n<style id="pervent-final-polish">\n.auth-submit{min-width:108px!important;height:42px!important;align-self:stretch!important;border-radius:0 12px 12px 0!important;background:linear-gradient(135deg,#8b3ff0,#b06cff)!important;color:#fff!important;text-shadow:0 1px 8px rgba(0,0,0,.25);box-shadow:-1px 0 rgba(255,255,255,.08),0 0 28px rgba(145,73,255,.14)!important}\n.auth-submit:hover{filter:brightness(1.12)!important;transform:translateY(-1px)!important;box-shadow:-1px 0 rgba(255,255,255,.08),0 0 36px rgba(145,73,255,.28)!important}\n.auth-submit:active{transform:scale(.985)!important}\n#page-dashboard .dashboard-wrap{padding:0 34px 38px!important;gap:18px!important}\n#page-dashboard .dash-hero{min-height:300px!important;padding:34px!important}\n#page-dashboard .dash-title{font-size:42px!important}\n#page-dashboard .dash-sub{max-width:720px!important;font-size:13px!important}\n#page-dashboard .dash-grid{grid-template-columns:1.15fr .85fr!important;gap:16px!important}\n#page-dashboard .dash-card{border-radius:18px!important}\n.pv-instance-panel{position:relative;overflow:hidden;padding:18px;background:linear-gradient(145deg,rgba(25,14,40,.86),rgba(8,6,13,.82));border:1px solid rgba(168,85,247,.19);border-radius:18px;box-shadow:0 22px 65px rgba(0,0,0,.30),inset 0 1px rgba(255,255,255,.04)}\n.pv-instance-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}\n.pv-instance-title{font-size:13px;font-weight:750}.pv-instance-sub{font-size:10px;color:#91869f;margin-top:3px}\n.pv-instance-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}\n.pv-instance{position:relative;padding:13px;border-radius:14px;border:1px solid rgba(168,85,247,.13);background:rgba(255,255,255,.025);cursor:pointer;transition:all .28s cubic-bezier(.2,.8,.2,1);overflow:hidden}\n.pv-instance:hover{transform:translateY(-3px);border-color:rgba(168,85,247,.35);box-shadow:0 15px 38px rgba(0,0,0,.28),0 0 24px rgba(124,58,237,.08)}\n.pv-instance.selected{border-color:rgba(168,85,247,.62);background:linear-gradient(135deg,rgba(124,58,237,.17),rgba(168,85,247,.045));box-shadow:0 0 30px rgba(124,58,237,.12),inset 0 1px rgba(255,255,255,.05)}\n.pv-instance-row{display:flex;align-items:center;gap:10px}.pv-instance-dot{width:9px;height:9px;border-radius:50%;background:#a855f7;box-shadow:0 0 15px rgba(168,85,247,.8);animation:pInstPulse 1.8s ease-in-out infinite}.pv-instance-name{font-size:12px;font-weight:700}.pv-instance-meta{font-size:10px;color:#8f839c;margin-top:6px}.pv-instance-check{margin-left:auto;width:18px;height:18px;border-radius:50%;border:1px solid rgba(255,255,255,.12);display:grid;place-items:center;color:#fff;font-size:10px}.pv-instance.selected .pv-instance-check{background:linear-gradient(135deg,#7c3aed,#a855f7);border-color:transparent;box-shadow:0 0 16px rgba(168,85,247,.4)}\n@keyframes pInstPulse{50%{transform:scale(1.22);opacity:.72}}\n.pv-refresh{padding:8px 11px!important;font-size:10px!important;border-radius:10px!important}\n.pv-support-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}\n.pv-support-card{padding:17px;border:1px solid rgba(168,85,247,.15);border-radius:16px;background:linear-gradient(145deg,rgba(22,13,34,.76),rgba(8,6,12,.75));box-shadow:0 15px 42px rgba(0,0,0,.24)}\n.pv-support-title{font-size:12px;font-weight:750}.pv-support-sub{font-size:10px;color:#91869f;line-height:1.5;margin-top:4px}.pv-support-row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:13px;padding-top:12px;border-top:1px solid rgba(255,255,255,.06)}\n.pv-support-btn{padding:9px 12px!important;font-size:10px!important;border-radius:10px!important;white-space:nowrap}\n.pv-status-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#9dffca;box-shadow:0 0 12px rgba(157,255,202,.55);margin-right:6px}\n#page-dashboard.injected .dash-hero{min-height:180px!important}\n#page-dashboard.injected .dash-inject{display:none!important}\n#page-dashboard.injected .dash-open{display:none!important}\n#page-dashboard.injected .dash-kicker:after{content:' • SESSION LOADED';color:#9dffca}\n@media(max-width:800px){#page-dashboard .dash-grid,.pv-support-grid{grid-template-columns:1fr!important}#page-dashboard .dash-title{font-size:32px!important}}\n</style>\n
+
+<style id="pervent-locked-menu-redesign">
+/* Readable controls: fix dark/black text on dark buttons shown in screenshot */
+#app button,
+#app .btn,
+#app .apply-all,
+#app .revert-all,
+#app [class*="apply"],
+#app [class*="revert"]{
+  color:#f7f2ff !important;
+  -webkit-text-fill-color:#f7f2ff !important;
+  font-weight:700 !important;
+  text-shadow:0 1px 8px rgba(0,0,0,.28) !important;
+}
+#app button:disabled{
+  color:#898092 !important;
+  -webkit-text-fill-color:#898092 !important;
+}
+#app .apply-all,
+#app .revert-all,
+#app [class*="apply"],
+#app [class*="revert"]{
+  background:linear-gradient(135deg,rgba(38,22,56,.95),rgba(14,9,21,.98)) !important;
+  border:1px solid rgba(168,85,247,.35) !important;
+  box-shadow:0 10px 30px rgba(0,0,0,.24),inset 0 1px rgba(255,255,255,.06) !important;
+}
+#app .apply-all:hover,
+#app .revert-all:hover,
+#app [class*="apply"]:hover,
+#app [class*="revert"]:hover{
+  border-color:rgba(168,85,247,.65) !important;
+  box-shadow:0 0 30px rgba(168,85,247,.15),0 14px 35px rgba(0,0,0,.30) !important;
+}
+
+/* Dashboard is a separate landing state. Hide the real client menu until loaded. */
+#app.pervent-dashboard-only .sidebar,
+#app.pervent-dashboard-only .menu-shell,
+#app.pervent-dashboard-only .client-shell{
+  display:none !important;
+}
+#app.pervent-dashboard-only .main{width:100% !important;max-width:none !important}
+#app.pervent-dashboard-only .page:not(#page-dashboard){display:none !important}
+#app.pervent-dashboard-only #page-dashboard{display:block !important;min-height:100% !important}
+
+/* Loaded state = brand-new client menu view */
+#app.pervent-client-menu .sidebar{display:flex !important}
+#app.pervent-client-menu #page-dashboard{display:none !important}
+#app.pervent-client-menu .main{width:auto !important}
+
+/* Make the dashboard substantially larger */
+#page-dashboard .dashboard-wrap{width:min(1260px,calc(100% - 58px)) !important;margin:0 auto !important;padding:36px 0 48px !important}
+#page-dashboard .dash-hero{min-height:330px !important;padding:42px !important;border-radius:26px !important}
+#page-dashboard .dash-title{font-size:48px !important;line-height:1.02 !important}
+#page-dashboard .dash-sub{font-size:14px !important;max-width:760px !important;line-height:1.65 !important}
+#page-dashboard .dash-grid{gap:18px !important}
+
+/* Instance selector */
+.pv-instance-panel{margin-top:18px !important;padding:18px !important;border-radius:18px !important;background:linear-gradient(145deg,rgba(25,14,40,.9),rgba(8,6,13,.84)) !important;border:1px solid rgba(168,85,247,.2) !important;box-shadow:0 22px 65px rgba(0,0,0,.3),inset 0 1px rgba(255,255,255,.04) !important}
+.pv-instance-list{display:grid !important;grid-template-columns:repeat(auto-fit,minmax(230px,1fr)) !important;gap:10px !important}
+.pv-instance{border-radius:14px !important}
+.pv-instance.selected{border-color:rgba(168,85,247,.7) !important;box-shadow:0 0 34px rgba(124,58,237,.15),inset 0 1px rgba(255,255,255,.05) !important}
+
+/* Locked menu nav appearance */
+#app.pervent-dashboard-only .nav-item{pointer-events:none !important;opacity:.35 !important}
+
+/* Smooth view transition */
+#app.pervent-dashboard-only,
+#app.pervent-client-menu{animation:perventViewIn .45s cubic-bezier(.2,.8,.2,1) both}
+@keyframes perventViewIn{from{opacity:.2;transform:translateY(12px);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
+
+/* one-time injection state */
+#page-dashboard.pervent-loaded #dash-inject{display:none !important}
+#page-dashboard.pervent-loaded #dash-open{display:none !important}
+</style>
+
 </head>
 <body>
 
@@ -2030,6 +2106,27 @@ document.addEventListener('DOMContentLoaded',()=>{
               <div class="dash-faq-item"><div class="dash-faq-q">Where is support?</div><div class="dash-faq-a">Use the Discord button in the sidebar to join the Pervent support server.</div></div>
             </div>
           </section>
+
+          <section class="pv-instance-panel" id="pv-instance-panel">
+            <div class="pv-instance-head">
+              <div><div class="pv-instance-title">Minecraft instances</div><div class="pv-instance-sub" id="pv-instance-sub">Checking for running Minecraft windows…</div></div>
+              <button class="pv-refresh" id="pv-refresh" onclick="perventRefreshInstances()">Refresh</button>
+            </div>
+            <div class="pv-instance-list" id="pv-instance-list"></div>
+          </section>
+
+          <div class="pv-support-grid">
+            <section class="pv-support-card">
+              <div class="pv-support-title">Device & HWID</div>
+              <div class="pv-support-sub">Your device identifier is linked to the active license. Request a reset if you changed devices.</div>
+              <div class="pv-support-row"><span id="pv-hwid-status"><span class="pv-status-dot"></span>Device registered</span><button class="pv-support-btn" onclick="openHwidReset()">Request HWID reset</button></div>
+            </section>
+            <section class="pv-support-card">
+              <div class="pv-support-title">Discord review</div>
+              <div class="pv-support-sub">HWID reset requests are reviewed through your Pervent Discord workflow.</div>
+              <div class="pv-support-row"><span id="pv-discord-status">Waiting for a request</span><button class="pv-support-btn" onclick="window.zenith?.openExternal('https://discord.gg/perventversion2')">Open Discord</button></div>
+            </section>
+          </div>
         </div>
       </div>
 
@@ -4710,6 +4807,197 @@ setInterval(updatePerventDashboard, 1000);
       {boxShadow:''}
     ],{duration:480,easing:'cubic-bezier(.2,.8,.2,1)'});
   },{passive:true});
+})();
+</script>
+
+\n<script id="pervent-final-behavior">\n(function(){\n  let injected=false;\n  let selected=null;\n  let instances=[];\n\n  function mcOpen(){return typeof mcRunningState!=='undefined' && mcRunningState===true}\n\n  async function fetchInstances(){\n    try{\n      if(window.zenith?.getMinecraftInstances){\n        const result=await window.zenith.getMinecraftInstances();\n        if(Array.isArray(result)) return result.filter(Boolean);\n      }\n    }catch(e){}\n    // Browser preview / older preload: use the existing running-state detector.\n    return mcOpen()?[{id:'minecraft-default',name:'Minecraft',title:'Detected Minecraft instance',status:'Running'}]:[];\n  }\n\n  function renderInstances(){\n    const list=document.getElementById('pv-instance-list');\n    const sub=document.getElementById('pv-instance-sub');\n    if(!list||!sub)return;\n    list.innerHTML='';\n    if(!instances.length){\n      sub.textContent='No Minecraft instance detected. Open Minecraft and press Refresh.';\n      list.innerHTML='<div class="pv-instance" style="grid-column:1/-1;cursor:default;opacity:.65"><div class="pv-instance-row"><span class="pv-instance-dot" style="background:#8b8190;box-shadow:none;animation:none"></span><div><div class="pv-instance-name">No instance available</div><div class="pv-instance-meta">The menu remains locked until Minecraft is detected.</div></div></div></div>';\n      return;\n    }\n    sub.textContent=instances.length===1?'1 Minecraft instance detected':instances.length+' Minecraft instances detected — choose one';\n    instances.forEach((item,i)=>{\n      const el=document.createElement('div');el.className='pv-instance'+((selected?.id===item.id)?' selected':'');\n      el.innerHTML='<div class="pv-instance-row"><span class="pv-instance-dot"></span><div><div class="pv-instance-name"></div><div class="pv-instance-meta"></div></div><span class="pv-instance-check">✓</span></div>';\n      el.querySelector('.pv-instance-name').textContent=item.name||'Minecraft';\n      el.querySelector('.pv-instance-meta').textContent=(item.title||'Minecraft')+' • '+(item.status||'Running');\n      el.onclick=()=>{selected=item;renderInstances();updateGate()};\n      list.appendChild(el);\n    });\n    if(!selected || !instances.some(x=>x.id===selected.id)) selected=instances[0];\n  }\n\n  function updateGate(){\n    const open=mcOpen();\n    const ready=open && !!selected && !injected;\n    const inject=document.getElementById('dash-inject');\n    const label=document.getElementById('dash-inject-label');\n    const openBtn=document.querySelector('#page-dashboard .dash-open');\n    if(inject){inject.disabled=!ready;inject.title=ready?'Load the selected Minecraft instance':'Open Minecraft first'}\n    if(label)label.textContent=injected?'Already loaded':(open?(selected?'Load selected instance':'Select an instance'):'Start Minecraft');\n    if(openBtn){openBtn.disabled=!injected;openBtn.title=injected?'Open loaded client menu':'Load the client first'}\n    document.querySelectorAll('#page-dashboard .dash-open').forEach(b=>b.classList.toggle('pervent-mc-locked',!injected));\n    const dash=document.getElementById('page-dashboard');\n    if(dash)dash.classList.toggle('injected',injected);\n  }\n\n  window.perventRefreshInstances=async function(){\n    if(injected){updateGate();return}\n    instances=await fetchInstances();\n    if(!instances.length)selected=null;\n    else if(!selected || !instances.some(x=>x.id===selected.id))selected=instances[0];\n    renderInstances();updateGate();\n  };\n\n  // Visual-only loader: no process injection is performed.\n  const originalInject=window.perventDashboardInject;\n  window.perventDashboardInject=async function(){\n    if(injected || !mcOpen() || !selected){updateGate();if(!mcOpen()&&window.perventToast)window.perventToast('Open Minecraft first.');return}\n    if(typeof originalInject==='function'){\n      // Keep the existing polished visual loading sequence.\n      await originalInject();\n    }\n    injected=true;\n    const dash=document.getElementById('page-dashboard');\n    const nav=document.getElementById('ni-dashboard');\n    if(dash)dash.classList.add('injected');\n    if(nav)nav.style.display='none';\n    // Dashboard disappears after the one-time load and the client menu becomes the main view.\n    setTimeout(()=>{\n      if(typeof goTo==='function')goTo('crystal',document.getElementById('ni-crystal'));\n      if(dash)dash.classList.remove('active');\n      if(window.perventToast)window.perventToast('Client loaded — menu unlocked.');\n      updateGate();\n    },150);\n  };\n\n  // Gate all menu pages until the one-time load is completed and Minecraft exists.\n  const originalGoTo=window.goTo;\n  window.goTo=function(id,el){\n    const menuPage=['crystal','sword','mace','cart','uhc','queue','optimizer','profiles'];\n    if(menuPage.includes(id) && (!injected || !mcOpen())){\n      if(window.perventToast)window.perventToast(!mcOpen()?'Open Minecraft first.':'Load the client from Dashboard first.');\n      updateGate();return false;\n    }\n    return originalGoTo.apply(this,arguments);\n  };\n\n  // Keep the dashboard as the landing screen after license activation.\n  const oldFinish=window.finishLogin;\n  if(typeof oldFinish==='function'){\n    // No override: existing finishLogin already lands on dashboard.\n  }\n\n  // Existing MC event hooks update mcRunningState; refresh instance cards after each change.\n  if(window.zenith?.onMcRunning)window.zenith.onMcRunning(()=>{setTimeout(window.perventRefreshInstances,50)});\n\n  document.addEventListener('DOMContentLoaded',()=>{\n    // Make the screenshot's activation button consistently readable.\n    const a=document.querySelector('.auth-submit');if(a){a.style.color='#fff';a.style.fontWeight='700'}\n    window.perventRefreshInstances();\n    updateGate();\n  });\n  setInterval(()=>{if(!injected)window.perventRefreshInstances();updateGate()},1200);\n})();\n</script>\n
+
+<script id="pervent-locked-menu-controller">
+(function(){
+  let loaded=false;
+  let busy=false;
+  let selectedInstance=null;
+  let instances=[];
+
+  function app(){return document.getElementById('app')}
+  function mcOpen(){return typeof mcRunningState!=='undefined' && mcRunningState===true}
+  function toast(msg){
+    if(typeof window.perventToast==='function') window.perventToast(msg);
+  }
+
+  function setDashboard(){
+    const a=app(); if(!a)return;
+    a.classList.add('pervent-dashboard-only');
+    a.classList.remove('pervent-client-menu');
+  }
+  function setClientMenu(){
+    const a=app(); if(!a)return;
+    a.classList.remove('pervent-dashboard-only');
+    a.classList.add('pervent-client-menu');
+  }
+
+  async function getInstances(){
+    try{
+      if(window.zenith && typeof window.zenith.getMinecraftInstances==='function'){
+        const list=await window.zenith.getMinecraftInstances();
+        if(Array.isArray(list)) return list.filter(Boolean).map((x,i)=>({
+          id:x.id ?? x.pid ?? ('mc-'+i),
+          name:x.name ?? 'Minecraft',
+          title:x.title ?? x.windowTitle ?? 'Minecraft instance',
+          status:x.status ?? 'Running'
+        }));
+      }
+    }catch(e){}
+    return mcOpen() ? [{id:'detected-minecraft',name:'Minecraft',title:'Detected Minecraft instance',status:'Running'}] : [];
+  }
+
+  function drawInstances(){
+    const list=document.getElementById('pv-instance-list');
+    const sub=document.getElementById('pv-instance-sub');
+    if(!list||!sub)return;
+    list.innerHTML='';
+    sub.textContent=instances.length===0
+      ? 'No Minecraft instance detected — open Minecraft to continue.'
+      : (instances.length===1 ? '1 Minecraft instance detected.' : instances.length+' Minecraft instances detected — select one.');
+
+    if(!instances.length){
+      list.innerHTML='<div class="pv-instance" style="grid-column:1/-1;cursor:default;opacity:.66"><div class="pv-instance-row"><span class="pv-instance-dot" style="background:#777;box-shadow:none;animation:none"></span><div><div class="pv-instance-name">Waiting for Minecraft</div><div class="pv-instance-meta">The client menu is locked until Minecraft is detected.</div></div></div></div>';
+      selectedInstance=null;
+      return;
+    }
+
+    instances.forEach(item=>{
+      const node=document.createElement('div');
+      node.className='pv-instance'+(selectedInstance && selectedInstance.id===item.id?' selected':'');
+      node.innerHTML='<div class="pv-instance-row"><span class="pv-instance-dot"></span><div><div class="pv-instance-name"></div><div class="pv-instance-meta"></div></div><span class="pv-instance-check">✓</span></div>';
+      node.querySelector('.pv-instance-name').textContent=item.name;
+      node.querySelector('.pv-instance-meta').textContent=item.title+' • '+item.status;
+      node.addEventListener('click',()=>{
+        if(busy||loaded)return;
+        selectedInstance=item;
+        drawInstances();
+        updateGate();
+      });
+      list.appendChild(node);
+    });
+
+    if(!selectedInstance || !instances.some(x=>x.id===selectedInstance.id)){
+      selectedInstance=instances[0];
+      drawInstances();
+    }
+  }
+
+  function updateGate(){
+    const detected=mcOpen();
+    const canLoad=detected && !!selectedInstance && !loaded && !busy;
+    const inject=document.getElementById('dash-inject');
+    const label=document.getElementById('dash-inject-label');
+    const open=document.getElementById('dash-open');
+
+    if(inject){
+      inject.disabled=!canLoad;
+      inject.title=canLoad?'Load the selected Minecraft instance':(!detected?'Open Minecraft first':(loaded?'Already loaded':'Select a Minecraft instance'));
+    }
+    if(label){
+      label.textContent=busy?'Loading…':loaded?'Client Loaded':(!detected?'Start Minecraft':(!selectedInstance?'Select Instance':'Inject Client'));
+    }
+    if(open){
+      open.disabled=!loaded;
+      open.classList.toggle('pervent-mc-locked',!loaded);
+      open.title=loaded?'Open client menu':'Inject the client first';
+    }
+  }
+
+  async function refresh(){
+    if(loaded||busy)return;
+    instances=await getInstances();
+    drawInstances();
+    updateGate();
+  }
+  window.perventRefreshInstances=refresh;
+
+  /* One-time visual load. No actual game injection occurs. */
+  window.perventDashboardInject=async function(){
+    if(busy||loaded)return;
+    if(!mcOpen()){toast('Open Minecraft first.');updateGate();return;}
+    if(!selectedInstance){toast('Select a Minecraft instance first.');return;}
+
+    busy=true; updateGate();
+    const steps=[1,2,3,4];
+    const set=(n,state,text)=>{
+      const el=document.getElementById('dash-step-'+n);
+      if(el){el.classList.toggle('live',state==='live');el.classList.toggle('done',state==='done')}
+      const label=document.getElementById('dash-inject-label'); if(label&&text)label.textContent=text;
+    };
+    steps.forEach(n=>set(n,'idle'));
+    set(1,'live','Checking Minecraft');
+    await new Promise(r=>setTimeout(r,550));
+    if(!mcOpen()){busy=false;toast('Minecraft closed before loading finished.');updateGate();return;}
+    set(1,'done');set(2,'live','Preparing client UI');
+    await new Promise(r=>setTimeout(r,600));
+    set(2,'done');set(3,'live','Opening Pervent menu');
+    await new Promise(r=>setTimeout(r,650));
+    set(3,'done');set(4,'live','Client loaded');
+    await new Promise(r=>setTimeout(r,420));
+    set(4,'done');
+
+    loaded=true;busy=false;
+    const dash=document.getElementById('page-dashboard');
+    if(dash)dash.classList.add('pervent-loaded');
+    setClientMenu();
+
+    document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+    document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
+    const crystal=document.getElementById('page-crystal');
+    const crystalNav=document.getElementById('ni-crystal');
+    if(crystal)crystal.classList.add('active');
+    if(crystalNav)crystalNav.classList.add('active');
+    toast('Client loaded — menu unlocked.');
+    updateGate();
+  };
+
+  /* Gate all actual client menu pages until the one-time load. */
+  const realGoTo=window.goTo;
+  if(typeof realGoTo==='function'){
+    window.goTo=function(id,el){
+      const menu=['crystal','sword','mace','cart','uhc','queue','optimizer','profiles','themes','upgrade-optimizer','upgrade-profiles'];
+      if(menu.includes(id)){
+        if(!loaded){toast(mcOpen()?'Inject the client from Dashboard first.':'Open Minecraft first.');return false;}
+        if(!mcOpen()){toast('Minecraft is no longer detected.');setDashboard();loaded=false;selectedInstance=null;refresh();return false;}
+      }
+      return realGoTo.apply(this,arguments);
+    };
+  }
+
+  /* Prevent the dashboard Open Menu control from bypassing the load. */
+  document.addEventListener('click',e=>{
+    const b=e.target.closest('#dash-open');
+    if(!b)return;
+    if(!loaded){e.preventDefault();e.stopImmediatePropagation();toast('Inject the client first.');}
+  },true);
+
+  /* Minecraft lifecycle */
+  if(window.zenith?.onMcRunning){
+    window.zenith.onMcRunning(running=>{
+      mcRunningState=!!running;
+      if(!running){
+        loaded=false;busy=false;selectedInstance=null;
+        setDashboard();
+        document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+        document.getElementById('page-dashboard')?.classList.add('active');
+        document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
+        document.getElementById('ni-dashboard')?.classList.add('active');
+      }
+      refresh();updateGate();
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded',()=>{
+    setDashboard();
+    refresh();
+    updateGate();
+  });
+  setInterval(()=>{if(!loaded)refresh();updateGate()},1200);
 })();
 </script>
 
