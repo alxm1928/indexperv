@@ -14,22 +14,28 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout source
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Set up Node.js 20 LTS
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: ''
 
       - name: Install dependencies
+        shell: pwsh
         run: npm.cmd install
 
-      - name: Rebuild native modules
-        run: npx.cmd electron-rebuild
+      - name: Rebuild native Electron modules
+        shell: pwsh
+        run: npx.cmd electron-builder install-app-deps
 
       - name: Build Windows installer
-        run: npm.cmd run build
+        shell: pwsh
+        run: npx.cmd electron-builder --win --publish never
+        env:
+          CSC_IDENTITY_AUTO_DISCOVERY: 'false'
 
       - name: Upload Windows installer
         uses: actions/upload-artifact@v4
@@ -37,3 +43,4 @@ jobs:
           name: Pervent-Client-Windows
           path: dist/*.exe
           if-no-files-found: error
+          retention-days: 14
