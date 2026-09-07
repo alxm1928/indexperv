@@ -1,0 +1,43 @@
+{
+  "name": "pervent-client",
+  "version": "2.0.0",
+  "description": "Pervent Client",
+  "main": "electron/main.js",
+  "dependencies": {
+    "@hurdlegroup/robotjs": "^0.12.3",
+    "electron-store": "^8.2.0",
+    "electron-updater": "^6.8.3",
+    "keysender": "^2.4.0",
+    "node-machine-id": "^1.1.12"
+  },
+  "productName": "Pervent Client",
+  "scripts": {
+    "license-server": "node license-server.js",
+    "discord-bot": "node discord-bot/index.js",
+    "start": "electron .",
+    "build": "electron-builder --win"
+  },
+  "devDependencies": {
+    "electron": "^38.0.0",
+    "electron-builder": "^26.0.0",
+    "discord.js": "^14.24.0"
+  },
+  "build": {
+    "appId": "com.pervent.client",
+    "productName": "Pervent Client",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "!license-data/**",
+      "!discord-bot/**",
+      "!.env",
+      "!.env.example"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    }
+  }
+}
